@@ -1,0 +1,36 @@
+// _variables.scss
+
+// Colors
+$primary-color: #D63E4B;
+$secondary-color: #48655E;
+$tertiary-color: #59BDB4;
+$quaternary-color: #F2F2F2;
+$white-color: #ffffff;
+$black-color: #000000;
+$background-color: antiquewhite;
+
+//Typography
+// $font-stack: Poppins, sans-serif;
+$font-stack: "Helvetica Neue, Helvetica, Arial, sans-serif";
+
+// Font sizes
+$font-size-smallest: 16px;
+$font-size-small: 18px;
+$font-size-medium: 20px;
+$font-size-large: 24px;
+$font-size-xlarge: 28px;
+$font-size-xxlarge: 40px;
+$font-size-huge: 50px;
+
+// Spacing
+$space-small: 8px;
+$space-medium: 16px;
+$space-large: 32px;
+
+$margin-small: $space-small;
+$margin-medium: $space-medium;
+$margin-large: $space-large;
+
+$padding-small: $space-small;
+$padding-medium: $space-medium;
+$padding-large: $space-large;

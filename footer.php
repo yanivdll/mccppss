@@ -1,7 +1,10 @@
-<footer class="site-footer">
+<footer class="site-footer" style="display: flow-root;">
+    <div class="container">
+        <div class="contact-us"><a href="mailto:contact@mccppss.org">Contact Us</a></div>
+    </div>
     <div class="container">
         <div class="copywrite">
-            <p>Copyright X - All Rights Reserved</p>
+            <p>© 2022 MCCPPSS</p>
         </div>
         <nav class="footer-menu">
             <?php 
@@ -12,9 +15,7 @@
                 ));
         ?>
         </nav>
+    </div>
 </footer>
-</div>
 <?php wp_footer(); ?>
 </body>
-
-</html>

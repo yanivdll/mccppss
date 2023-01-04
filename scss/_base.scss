@@ -1,0 +1,71 @@
+// _base.scss
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// html * {
+//     border: 1px solid green;
+// }
+
+body {
+    /* margin: 1.5em; */
+    font-family: $font-stack;
+    background-color: $background-color;
+    font-size: $font-size-medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: $font-size-huge;
+}
+
+h2 {
+    font-size: $font-size-xxlarge;
+}
+
+h3 {
+    font-size: $font-size-xlarge;
+}
+
+
+html,
+body,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+a.button {
+    display: inline-block;
+    background-color: #00c389;
+    color: black;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    ;
+}

@@ -1,0 +1,208 @@
+//_layout.scss
+
+// Top menu
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav.page-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 99;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+}
+
+.menu a {
+    color: black;
+    padding: 0.75em 2em;
+    display: block;
+}
+
+.menu a:hover {
+    background: #ebebeb;
+}
+
+.menu-icon .bar1,
+.menu-icon .bar2,
+.menu-icon .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.menu-icon,
+.check-button {
+    display: block;
+    z-index: 999;
+    border: none;
+    background: transparent;
+}
+
+.show-dropdown {
+    // left: 0 !important;
+    transform: translateX(0%) !important;
+    ;
+}
+
+.animate-button .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+    background-color: #000000;
+}
+
+.animate-button .bar2 {
+    opacity: 0;
+}
+
+.animate-button .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+    background-color: #000000;
+}
+
+
+/*********************************/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../uploads/2023/01/children-gb96cff659_1920-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: introLoad 2s forwards;
+}
+
+
+
+.mission {
+    background: linear-gradient(90deg, #ff8da1 0, red 48%, red 52%, #ff8da1 100%);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.projects,
+.partners {
+    // background: rgb(222, 234, 244);
+    margin-top: 20px;
+    // padding: 10px;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1em;
+    // background: rgb(213, 235, 194);
+    margin-top: 10px;
+    // padding: 10px;
+}
+
+.flex-item {
+    flex: 1 1 250px;
+    margin-top: 10px;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    // padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-transform: uppercase;
+}
+
+header svg {
+    width: 3em;
+    margin-top: -.6em;
+    cursor: pointer;
+
+}
+
+footer {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(25, 25, 106);
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    clear: both;
+    margin-top: 50px;
+    ;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu ul li {
+    display: inline;
+    cursor: pointer;
+}
+
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

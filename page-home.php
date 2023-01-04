@@ -1,59 +1,62 @@
 <?php get_header();?>
-<div id="content" class="site-content">
-    <div id="primar" class="content-area">
-        <main id="main" class="site-main">
-            <section class="hero">
-                Hero
-            </section>
-            <section class="services">
-                <h2>Services</h2>
-                <div class="container">
-
-
-                    <?php if(is_active_sidebar('sidebar-page')){
-                            dynamic_sidebar('sidebar-page');
-                    }
-                         ?>
-
-                </div>
-            </section>
-            <section class="home-blog">
-                <h2>Latest News</h2>
-                <div class="container">
-                    <?php
-                        $args = array(
-                            'post_type' => 'post',
-                            'posts_per_page' => 3
-                        );
-                        $post_list = new WP_Query($args);
-
-                        if($post_list->have_posts()):
-                            while($post_list->have_posts()): $post_list->the_post();
-                    ?>
-                    <article class="latest-news">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <div class="meta-info">
-                            <p>
-                                by <span><?php the_author_posts_link(); ?></span>
-                                Categories: <span><?php the_category( ' ' ); ?></span>
-                                Tags: <?php the_tags( '', ', ' ); ?>
-                            </p>
-                            <p><span><?php echo get_the_date(); ?></p>
-                        </div>
-                        <?php the_excerpt(); ?>
-                    </article>
-                    <?php 
-                    endwhile;
-                    wp_reset_postdata();
-                    else: ?>
-                    <p>No content found</p>
-
-                    <?php endif;
-                ?>
-                </div>
-            </section>
-        </main>
+<div class="hero-image"></div>
+<section class="hero font-large"><mark>
+        The Multidisciplinary Center on Childhood,
+        Public Policy, and Sustainable Society
+    </mark></section>
+<section class="mission">
+    <h1>Mission</h1>
+    <div>
+        <p>Every living species is dependent on the ability of its continuing generation to thrive (reproductive
+            continuation). Humans are no different. </p>
     </div>
+    <a href="<?php echo get_permalink(11); ?>" class="button">
+        Read More
+    </a>
+</section>
+<section class="projects">
+    <h1>Projects</h1>
+    <div class="flex-container">
+        <div class="card flex-item">
+            <img class="thumbnail image"
+                src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                alt="computer hacking image">
+            <p class="overlay">Children and Privacy in the Digital Era</p>
+        </div>
+        <div class="card flex-item">
+            <img class="thumbnail image"
+                src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                alt="computer hacking image">
+            <p class="overlay">The Cost of Doing Nothing</p>
+        </div>
+    </div>
+    <a href="#" class="button">
+        All Projects
+    </a>
+</section>
+<section class="partners">
+    <h1>Partners</h1>
+    <div class="flex-container">
+        <div class="card flex-item">
+            <img class="thumbnail image"
+                src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                alt="computer hacking image">
+            <p class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores
+                dignissimos, quibusdam
+                incidunt</p>
+        </div>
+        <div class="card flex-item">
+            <img class="thumbnail image"
+                src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                alt="computer hacking image">
+            <p class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores
+                dignissimos, quibusdam
+                incidunt</p>
+        </div>
+    </div>
+    <a href="#" class="button">
+        All Partners
+    </a>
+</section>
 </div>
 <?php get_footer();?>

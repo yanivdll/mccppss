@@ -1,15 +1,15 @@
 <?php 
 
-function wpdevs_load_scripts(){
-    wp_enqueue_style('wpdevs-style', get_stylesheet_uri(), array(), filemtime(get_template_directory().'/style.css'), 'all');
+function ngo_load_scripts(){
+    wp_enqueue_style('ngo-style', get_stylesheet_uri(), array(), filemtime(get_template_directory().'/style.css'), 'all');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap', false);
     wp_enqueue_script('dropdown', get_template_directory_uri().'/js/dropdown.js', array(), '1.0', true);
 }
-add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');            
+add_action('wp_enqueue_scripts', 'ngo_load_scripts');            
 
 
 
-function wpdevs_config(){
+function ngo_config(){
 register_nav_menus(
     array(
         'wp_devs_main_menu' => 'Main Menu',
@@ -29,9 +29,9 @@ add_theme_support('custom-logo', array(
     'flex-width' => true
 ));
 }
-add_action('after_setup_theme', 'wpdevs_config', 0); //0 is the highest priority
+add_action('after_setup_theme', 'ngo_config', 0); //0 is the highest priority
 
-function wpdevs_sidebars()
+function ngo_sidebars()
 {
     register_sidebar(
         array(
@@ -54,5 +54,5 @@ function wpdevs_sidebars()
             'after_title' => '</h4>'
         )) ;
 }
-add_action('widgets_init', 'wpdevs_sidebars');
+add_action('widgets_init', 'ngo_sidebars');
 ?>

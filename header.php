@@ -8,49 +8,28 @@
     <?php wp_head();?>
     <!-- //     removed the title tag here because it will be added the theme_support function -->
 </head>
-<!--    body_class() is a function that will add the class to the body tag -->
 
-<body <?php body_class();?>>
-    <div id="page" class="site">
+<body <?php body_class(); ?>>
+
+    <div class="container">
         <header>
-            <section class="top-bar">
-                <div class="container">
-                    <div class="logo">
-                        <?php 
-                        if (has_custom_logo()){
-                            the_custom_logo();
-                        } else {
-                            ?>
-                        <span><a href="<?php echo home_url(); ?>"><span><?php bloginfo('name'); ?></span></a>
-                            <?php
-                        }
-                            ?>
-                    </div>
-                    <div class=" searchbox">
-                        Searchbox
-                    </div>
-                </div>
-            </section>
-            <section class="menu-area">
-                <div class="container">
-                    <nav class="main-menu">
-                        <button class="check-button">
-                            <div class="menu-icon">
-                                <div class="bar1"></div>
-                                <div class="bar2"></div>
-                                <div class="bar3"></div>
-                            </div>
-                        </button>
-
-                        <?php 
+            <a href="index.html" class="site-logo centered">MCCPPSS</a>
+            <nav class="page-menu">
+                <?php 
                         wp_nav_menu(
                             array(
                                 'theme_location' => 'wp_devs_main_menu',
                                 // 'menu_class' => 'menu', //default class is 'menu'
-                                'depth' => 2 #how many submenus you want to show
+                                'depth' => 1 #how many submenus you want to show
                             ));
                             ?>
-                    </nav>
+            </nav>
+
+            <button class="check-button">
+                <div class="menu-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
-            </section>
+            </button>
         </header>
