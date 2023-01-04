@@ -10,26 +10,24 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-    <div class="container">
-        <header>
-            <a href="index.html" class="site-logo centered">MCCPPSS</a>
-            <nav class="page-menu">
-                <?php 
+    <header>
+        <a href="index.html" class="site-logo centered">MCCPPSS</a>
+        <nav class="page-menu">
+            <?php 
                         wp_nav_menu(
                             array(
-                                'theme_location' => 'wp_devs_main_menu',
+                                'theme_location' => 'ngo_main_menu',
                                 // 'menu_class' => 'menu', //default class is 'menu'
                                 'depth' => 1 #how many submenus you want to show
                             ));
                             ?>
-            </nav>
+        </nav>
 
-            <button class="check-button">
-                <div class="menu-icon">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            </button>
-        </header>
+        <button class="check-button">
+            <div class="menu-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+    </header>

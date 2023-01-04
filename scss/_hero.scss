@@ -1,16 +1,36 @@
 //_hero.scss
 
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../uploads/2023/01/children-gb96cff659_1920-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: introLoad 2s forwards;
+}
+
 section.hero {
+    width: 60%;
     height: 90vh;
-    animation: moveDown 1s ease-in-out forwards;
     padding-top: 50vh;
     color: $white-color;
+    font-size: $font-size-medium;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    animation: moveDown 1s ease-in-out forwards;
 
     mark {
-        background-color: $black-color;
         margin: 0.1em 0;
+        background-color: $black-color;
         opacity: 0.8;
         color: $white-color;
         word-spacing: 0.2rem;
+        line-height: $font-size-large;
     }
 }

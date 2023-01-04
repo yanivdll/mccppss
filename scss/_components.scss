@@ -2,73 +2,13 @@
 
 // These are utility-driven classes that can be used in any component
 
-.font-large {
-    font-size: $font-size-large;
-    font-weight: 600;
-    width: 60%;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-}
+
 
 .centered {
     display: flex;
     align-items: center;
 }
 
-img.thumbnail {
-    // border: 1px solid #ddd;
-    // border-radius: 4px;
-    // padding: 5px;
-    width: 100%;
-
-}
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    // margin: 0.2em;
-}
-
-.flex-item {
-    flex: 1 1 250px;
-    // margin: 0.2em;
-}
-
-.card {
-    position: relative;
-    width: 100%;
-    // max-width: 300px;
-}
-
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    // background: rgb(0, 0, 0);
-    // background: rgba(0, 0, 0, 0.5);
-    /* Black see-through */
-    color: #f1f1f1;
-    width: 100%;
-    transition: .5s ease;
-    opacity: 1;
-    color: white;
-    font-size: 1rem;
-    padding: 0px 20px;
-    text-align: left;
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.card:hover .overlay {
-    color: antiquewhite;
-}
 
 .sticky {
     position: fixed;

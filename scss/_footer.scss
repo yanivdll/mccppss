@@ -1,13 +1,46 @@
 footer {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: $space-large;
+    padding-bottom: $space-large;
+    margin-top: $space-large;
     text-align: center;
-    background-color: rgb(25, 25, 106);
+    background-color: $primary-color;
     display: block;
-    color: white;
+    color: $white-color;
     text-transform: uppercase;
     clear: both;
-    margin-top: 50px;
-    ;
+}
+
+nav.footer-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu a {
+    color: $white-color;
+    padding-top: $space-small;
+    padding-bottom: $space-small;
+    padding-left: $space-small;
+    padding-right: $space-small;
+    display: block;
+}
+
+.footer-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin-top: 0;
+
+    li {
+        display: inline;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
