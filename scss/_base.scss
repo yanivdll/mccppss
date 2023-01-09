@@ -13,7 +13,8 @@ body {
     /* margin: 1.5em; */
     font-family: $font-stack;
     background-color: $background-color;
-    font-size: $base-font-size;
+    font-size: $font-size-medium;
+    ;
 }
 
 h1,
@@ -23,10 +24,13 @@ h4,
 h5,
 h6 {
     margin: 0;
+    // margin: $margin-large auto;
 }
 
 h1 {
-    font-size: $font-size-huge;
+    font-size: $font-size-xlarge;
+    color: $primary-color;
+
 }
 
 h2 {
@@ -68,4 +72,8 @@ a.button {
     margin: 5px 0px;
     border-radius: 5px;
     ;
+}
+
+p {
+    line-height: $line-height;
 }

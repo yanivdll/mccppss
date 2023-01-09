@@ -2,8 +2,6 @@
 
 // These are utility-driven classes that can be used in any component
 
-
-
 .centered {
     display: flex;
     align-items: center;
@@ -15,4 +13,9 @@
     right: 10%;
     top: 20px;
     z-index: 999;
+}
+
+.title {
+    margin-top: $margin-large;
+    margin-bottom: $margin-large;
 }

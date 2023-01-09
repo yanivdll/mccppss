@@ -6,6 +6,8 @@ header {
     color: white;
     background-color: $primary-color;
     text-transform: uppercase;
+    padding-left: $padding-small;
+    padding-right: $padding-small;
 }
 
 header svg {
@@ -13,4 +15,143 @@ header svg {
     margin-top: -.6em;
     cursor: pointer;
 
+}
+
+.org-name {
+
+    background-color: $quaternary-color;
+    cursor: pointer;
+
+    h1 {
+        color: $white-color;
+        font-size: $font-size-xlarge;
+        font-weight: 600;
+    }
+}
+
+.site-logo {
+    color: $white-color;
+}
+
+// Top menu
+
+nav.page-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: $white-color;
+    height: 100vh;
+    width: 50%;
+    z-index: 99;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+}
+
+.menu a {
+    color: black;
+    padding-top: $space-medium;
+    padding-bottom: $space-medium;
+    padding-left: $space-medium;
+    padding-right: $space-medium;
+    display: block;
+}
+
+.menu a:hover {
+    background: #ebebeb;
+}
+
+.menu-icon .bar1,
+.menu-icon .bar2,
+.menu-icon .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.menu-icon,
+.check-button {
+    display: block;
+    z-index: 999;
+    border: none;
+    background: transparent;
+}
+
+.show-dropdown {
+    // left: 0 !important;
+    transform: translateX(0%) !important;
+    ;
+}
+
+.animate-button .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+    background-color: #000000;
+}
+
+.animate-button .bar2 {
+    opacity: 0;
+}
+
+.animate-button .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+    background-color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+    nav.page-menu {
+        position: static;
+        background: none;
+        height: auto;
+        width: auto;
+        z-index: 99;
+        text-transform: uppercase;
+        transform: translateX(0%);
+        transition: none;
+    }
+
+    ul.menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .menu a {
+        color: $white-color;
+        // padding-top: $space-medium;
+        // padding-bottom: $space-medium;
+        // padding-left: $space-medium;
+        // padding-right: $space-medium;
+        display: block;
+        height: 100%;
+    }
+
+    .menu a:hover {
+        color: $primary-color;
+        background: $tertiary-color;
+    }
+
+    .menu-icon .bar1,
+    .menu-icon .bar2,
+    .menu-icon .bar3 {
+        display: none;
+    }
+
+    .menu-icon,
+    .check-button {
+        display: none;
+    }
 }

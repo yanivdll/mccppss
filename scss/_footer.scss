@@ -11,17 +11,22 @@ footer {
     clear: both;
 }
 
+.contact-us a {
+    color: $white-color;
+    font-size: $font-size-smallest;
+    padding: $padding-small;
+}
+
 nav.footer-menu {
     margin: 0;
     padding: 0;
 }
 
-.footer-menu a {
+.footer-menu a,
+.site-footer p {
     color: $white-color;
-    padding-top: $space-small;
-    padding-bottom: $space-small;
-    padding-left: $space-small;
-    padding-right: $space-small;
+    font-size: $font-size-smallest;
+    padding: $padding-small;
     display: block;
 }
 
@@ -43,4 +48,5 @@ nav.footer-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }

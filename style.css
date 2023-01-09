@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: MCCPPSS 
 Theme URI: http://mccppss.org/
@@ -370,7 +371,7 @@ body {
   /* margin: 1.5em; */
   font-family: "Helvetica Neue, Helvetica, Arial, sans-serif";
   background-color: #F4E3BA;
-  font-size: 16px;
+  font-size: 1.25rem;
 }
 
 h1,
@@ -383,15 +384,16 @@ h6 {
 }
 
 h1 {
-  font-size: 3.125em;
+  font-size: 1.75rem;
+  color: #018385;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 html,
@@ -423,6 +425,10 @@ a.button {
   border-radius: 5px;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 header {
   width: 100%;
   height: 10vh;
@@ -431,6 +437,8 @@ header {
   color: white;
   background-color: #018385;
   text-transform: uppercase;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 header svg {
@@ -439,50 +447,25 @@ header svg {
   cursor: pointer;
 }
 
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../../uploads/2023/01/children-gb96cff659_1920-1.jpg") no-repeat center center fixed;
-  background-size: cover;
-  background-position-x: 20%;
-  background-position-y: 20%;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  animation: introLoad 2s forwards;
+.org-name {
+  background-color: #f4cf70;
+  cursor: pointer;
 }
-
-section.hero {
-  width: 60%;
-  height: 90vh;
-  padding-top: 50vh;
+.org-name h1 {
   color: #ffffff;
-  font-size: 1.25em;
+  font-size: 1.75rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  animation: moveDown 1s ease-in-out forwards;
-}
-section.hero mark {
-  margin: 0.1em 0;
-  background-color: #000000;
-  opacity: 0.8;
-  color: #ffffff;
-  word-spacing: 0.2rem;
-  line-height: 1.5em;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.site-logo {
+  color: #ffffff;
 }
 
 nav.page-menu {
   position: fixed;
   right: 0;
   top: 0;
-  background: white;
+  background: #ffffff;
   height: 100vh;
   width: 50%;
   z-index: 99;
@@ -499,10 +482,10 @@ ul.menu {
 
 .menu a {
   color: black;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   display: block;
 }
 
@@ -549,9 +532,82 @@ ul.menu {
   background-color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  nav.page-menu {
+    position: static;
+    background: none;
+    height: auto;
+    width: auto;
+    z-index: 99;
+    text-transform: uppercase;
+    transform: translateX(0%);
+    transition: none;
+  }
+  ul.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    height: 100%;
+  }
+  .menu a {
+    color: #ffffff;
+    display: block;
+    height: 100%;
+  }
+  .menu a:hover {
+    color: #018385;
+    background: #f6e7c6;
+  }
+  .menu-icon .bar1,
+  .menu-icon .bar2,
+  .menu-icon .bar3 {
+    display: none;
+  }
+  .menu-icon,
+  .check-button {
+    display: none;
+  }
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../uploads/2023/01/kids-running-to-the-sunrize.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position-x: 20%;
+  background-position-y: 70%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  animation: introLoad 2s forwards;
+}
+
+section.hero {
+  width: 60%;
+  height: 90vh;
+  padding-top: 50vh;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  animation: moveDown 1s ease-in-out forwards;
+}
+section.hero mark {
+  margin: 0.1em 0;
+  background-color: #000000;
+  opacity: 0.8;
+  color: #ffffff;
+  word-spacing: 0.2rem;
+  line-height: 1.5rem;
+}
+
 /*********************************/
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -568,11 +624,24 @@ section h1 {
   width: 100%;
   height: 100%;
   box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
-  background: linear-gradient(90deg, #ff8da1 0, red 48%, red 52%, #ff8da1 100%);
+  background-color: #4d4d4d;
+}
+.mission h1 {
+  padding: 0.5em 1em;
+  color: #ffffff;
+}
+.mission p {
+  padding: 0.5em 1em;
+  color: #ffffff;
+  font-size: 1.25rem;
 }
 
 .projects {
-  background-color: aquamarine;
+  background-color: #018385;
+}
+.projects h1 {
+  padding: 0.5em 1em;
+  color: #ffffff;
 }
 
 .partners {
@@ -596,21 +665,6 @@ section h1 {
 .flex-item {
   flex: 1 1 250px;
   margin-top: 10px;
-}
-
-header {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  text-transform: uppercase;
-}
-
-header svg {
-  width: 3em;
-  margin-top: -0.6em;
-  cursor: pointer;
 }
 
 @keyframes introLoad {
@@ -650,6 +704,11 @@ header svg {
   z-index: 999;
 }
 
+.title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .card-container {
   width: 100%;
   margin: 0 auto;
@@ -665,8 +724,10 @@ a {
 }
 
 .card {
-  width: 100%;
-  margin: 1em auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid rgb(173, 223, 169);
   box-shadow: 1px 2px 3px 4px rgba(156, 153, 153, 0.2);
@@ -674,17 +735,23 @@ a {
 .card a {
   color: #018385;
 }
+.card p {
+  margin-bottom: 0px;
+}
 
 .card-image,
-.card-title {
+.card-title,
+.card-description {
   margin: 0 auto;
+  width: 100%;
 }
 
 .card-image {
   padding: 1.2em 1em;
 }
 
-.card-title {
+.card-title,
+.card-description {
   padding: 1em 2em;
 }
 
@@ -712,9 +779,9 @@ a {
 }
 footer {
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 2rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 2em;
   text-align: center;
   background-color: #018385;
   display: block;
@@ -723,17 +790,22 @@ footer {
   clear: both;
 }
 
+.contact-us a {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
 nav.footer-menu {
   margin: 0;
   padding: 0;
 }
 
-.footer-menu a {
+.footer-menu a,
+.site-footer p {
   color: #ffffff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5em;
   display: block;
 }
 
@@ -754,6 +826,7 @@ nav.footer-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
 }
 
 .debug-me {
@@ -762,4 +835,26 @@ nav.footer-menu {
   background-color: black;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22scss/style.scss%22,%22scss/_normalize.scss%22,%22scss/_base.scss%22,%22scss/_variables.scss%22,%22scss/_header.scss%22,%22scss/_hero.scss%22,%22scss/_layout.scss%22,%22scss/_components.scss%22,%22scss/_card_container.scss%22,%22scss/_footer.scss%22,%22scss/_dev.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22style.css%22%7D */
+hr {
+  border: none;
+  width: 20%;
+  overflow: visible;
+  margin: 2em auto;
+  /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #018385;
+  color: #018385;
+  text-align: center;
+}
+
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22scss/style.scss%22,%22scss/_normalize.scss%22,%22scss/_base.scss%22,%22scss/_variables.scss%22,%22scss/_header.scss%22,%22scss/_hero.scss%22,%22scss/_layout.scss%22,%22scss/_components.scss%22,%22scss/_card_container.scss%22,%22scss/_footer.scss%22,%22scss/_dev.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22style.css%22%7D */

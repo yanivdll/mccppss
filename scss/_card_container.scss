@@ -4,7 +4,6 @@
     width: 100%;
     margin: 0 auto;
     padding: 0.5em 0;
-    // background-color: rgb(240, 233, 233);
 }
 
 a {
@@ -16,8 +15,11 @@ a {
 }
 
 .card {
-    width: 100%;
-    margin: 1em auto;
+    // width: 100%;
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+    margin-left: $margin-small;
+    margin-right: $margin-small;
     background-color: rgba(255, 255, 255, 0.95);
     border: 2px solid rgb(173, 223, 169);
     box-shadow: 1px 2px 3px 4px rgba(156, 153, 153, 0.2);
@@ -25,18 +27,25 @@ a {
     a {
         color: $primary-color;
     }
+
+    p {
+        margin-bottom: 0px;
+    }
 }
 
 .card-image,
-.card-title {
+.card-title,
+.card-description {
     margin: 0 auto;
+    width: 100%;
 }
 
 .card-image {
     padding: 1.2em 1em;
 }
 
-.card-title {
+.card-title,
+.card-description {
     padding: 1em 2em;
 }
 
@@ -47,6 +56,7 @@ a {
     height: auto;
 
 }
+
 
 @media (min-width: 640px) {
 

@@ -1,88 +1,8 @@
 //_layout.scss
 
-// Top menu
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-nav.page-menu {
-    position: fixed;
-    right: 0;
-    top: 0;
-    background: white;
-    height: 100vh;
-    width: 50%;
-    z-index: 99;
-    text-transform: uppercase;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-}
-
-ul.menu {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8em;
-}
-
-.menu a {
-    color: black;
-    padding-top: $space-medium;
-    padding-bottom: $space-medium;
-    padding-left: $space-medium;
-    padding-right: $space-medium;
-    display: block;
-}
-
-.menu a:hover {
-    background: #ebebeb;
-}
-
-.menu-icon .bar1,
-.menu-icon .bar2,
-.menu-icon .bar3 {
-    width: 28px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px 0;
-    transition: 0.4s;
-    z-index: 999;
-}
-
-.menu-icon,
-.check-button {
-    display: block;
-    z-index: 999;
-    border: none;
-    background: transparent;
-}
-
-.show-dropdown {
-    // left: 0 !important;
-    transform: translateX(0%) !important;
-    ;
-}
-
-.animate-button .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
-    transform: rotate(-45deg) translate(-4px, 4px);
-    background-color: #000000;
-}
-
-.animate-button .bar2 {
-    opacity: 0;
-}
-
-.animate-button .bar3 {
-    -webkit-transform: rotate(45deg) translate(-7px, -7px);
-    transform: rotate(45deg) translate(-7px, -7px);
-    background-color: #000000;
-}
-
-
 /*********************************/
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -94,11 +14,27 @@ section h1 {
 
 .mission {
     @include card(100%, 100%);
-    background: linear-gradient(90deg, #ff8da1 0, red 48%, red 52%, #ff8da1 100%);
+    background-color: $quinary-color;
+
+    h1 {
+        padding: $padding-small $padding-medium;
+        color: $white-color;
+    }
+
+    p {
+        padding: $padding-small $padding-medium;
+        color: $white-color;
+        font-size: $font-size-medium;
+    }
 }
 
 .projects {
-    background-color: aquamarine;
+    background-color: $primary-color;
+
+    h1 {
+        padding: $padding-small $padding-medium;
+        color: $white-color;
+    }
 }
 
 .partners {
@@ -128,22 +64,7 @@ section h1 {
     margin-top: 10px;
 }
 
-header {
-    width: 100%;
-    height: 10vh;
-    // padding-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    text-transform: uppercase;
-}
 
-header svg {
-    width: 3em;
-    margin-top: -.6em;
-    cursor: pointer;
-
-}
 
 
 

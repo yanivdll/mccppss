@@ -3,3 +3,26 @@
     z-index: 9999;
     background-color: black;
 }
+
+hr {
+    border: none;
+    width: 20%;
+    overflow: visible;
+    margin: $margin-large auto;
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double $primary-color;
+    color: $primary-color;
+    text-align: center;
+}
+
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+
+}

@@ -1,5 +1,12 @@
 // _variables.scss
 
+$fern: #659770; // (dark green)
+$silver: #c0c0c0; // (light gray)
+$almond: #efd9a9; // (light brown)
+$purple-pink: #d381c3; // (purple-pink)
+$dark-navy: #003366; //(dark navy blue)
+
+
 // Colors
 
 $primary-color: #018385;
@@ -17,18 +24,19 @@ $font-stack: "Helvetica Neue, Helvetica, Arial, sans-serif";
 
 // Font sizes
 $base-font-size: 16px; // 1rem
-$font-size-smallest: 1em; //16px
-$font-size-small: 1.125em; //18px
-$font-size-medium: 1.25em; //20px
-$font-size-large: 1.5em; //24px
-$font-size-xlarge: 1.75em; //28px
-$font-size-xxlarge: 2.5em; //40px
-$font-size-huge: 3.125em; //50px
+$font-size-smallest: 1rem; //16px
+$font-size-small: 1.125rem; //18px
+$font-size-medium: 1.25rem; //20px
+$font-size-large: 1.5rem; //24px
+$font-size-xlarge: 1.75rem; //28px
+$font-size-xxlarge: 2.5rem; //40px
+$font-size-huge: 3.125rem; //50px
 
 // Spacing
-$space-small: 0.5rem; //8px 
-$space-medium: 1rem; // 16px;
-$space-large: 2rem; // 32px;
+$line-height: 1.5em; //24px
+$space-small: 0.5em; //8px 
+$space-medium: 1em; // 16px;
+$space-large: 2em; // 32px;
 
 $margin-small: $space-small;
 $margin-medium: $space-medium;

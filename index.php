@@ -5,7 +5,7 @@
     <div id="primar" class="content-area">
         <main id="main" class="site-main">
             <section class="home-blog">
-                <h1>Blog</h1>
+                <h1 class="title">Blog</h1>
                 <div class="container">
                     <!-- WordPress Loop! -->
                     <div class="blog-items">
