@@ -5,16 +5,16 @@
     box-sizing: border-box;
 }
 
-// html * {
-//     border: 1px solid green;
-// }
 
 body {
-    /* margin: 1.5em; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Make sure container takes up the full height of the viewport */
+
     font-family: $font-stack;
     background-color: $background-color;
     font-size: $font-size-medium;
-    ;
 }
 
 h1,
@@ -24,13 +24,12 @@ h4,
 h5,
 h6 {
     margin: 0;
+    color: $primary-color;
     // margin: $margin-large auto;
 }
 
 h1 {
     font-size: $font-size-xlarge;
-    color: $primary-color;
-
 }
 
 h2 {
@@ -63,17 +62,37 @@ a {
 }
 
 
-
-a.button {
-    display: inline-block;
-    background-color: #00c389;
-    color: black;
-    padding: 5px;
-    margin: 5px 0px;
-    border-radius: 5px;
-    ;
-}
-
 p {
     line-height: $line-height;
+}
+
+main {
+    transform: translateZ(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: $button-color;
+    cursor: pointer;
+    padding: $padding-small;
+    border-radius: 5px;
+    font-size: $font-size-smallest;
+    text-transform: uppercase;
+    // transition: background-color 0.3s ease-in-out;
+    border: none;
+    box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+
+    a {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        color: $white-color;
+        font-size: $font-size-smallest;
+        font-weight: 600;
+    }
+}
+
+button:hover {
+    background-color: $button-hover-color;
 }

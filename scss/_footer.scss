@@ -1,21 +1,11 @@
 footer {
     width: 100%;
-    padding-top: $space-large;
-    padding-bottom: $space-large;
-    margin-top: $space-large;
-    text-align: center;
+    margin-top: $space-small;
     background-color: $primary-color;
-    display: block;
     color: $white-color;
     text-transform: uppercase;
-    clear: both;
 }
 
-.contact-us a {
-    color: $white-color;
-    font-size: $font-size-smallest;
-    padding: $padding-small;
-}
 
 nav.footer-menu {
     margin: 0;

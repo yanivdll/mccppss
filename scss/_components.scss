@@ -4,16 +4,11 @@
 
 .centered {
     display: flex;
+    flex: 1;
+    /* main content takes up remaining space */
     align-items: center;
 }
 
-
-.sticky {
-    position: fixed;
-    right: 10%;
-    top: 20px;
-    z-index: 999;
-}
 
 .title {
     margin-top: $margin-large;

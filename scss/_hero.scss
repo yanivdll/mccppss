@@ -16,22 +16,50 @@
 }
 
 section.hero {
-    width: 60%;
-    height: 90vh;
-    padding-top: 50vh;
+    width: 80%;
+    margin: auto auto;
+    // height: 90vh;
+    // padding-top: 50vh;
     color: $white-color;
-    font-size: $font-size-medium;
     font-weight: 600;
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
     animation: moveDown 1s ease-in-out forwards;
+}
 
-    mark {
-        margin: 0.1em 0;
-        background-color: $black-color;
-        opacity: 0.8;
+.mission {
+    @include card(100%, 100%);
+    background-color: $primary-color;
+
+    h3 {
+        text-align: center;
+        padding: $padding-small;
         color: $white-color;
-        word-spacing: 0.2rem;
-        line-height: $font-size-large;
+
+    }
+
+    p {
+        margin: 0;
+        padding: $padding-small $padding-small;
+        color: $white-color;
+        font-size: $font-size-smallest;
+        font-weight: 100;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-image {
+        background-attachment: fixed;
+    }
+
+    section.hero {
+        width: 30%;
+        margin-left: $margin-large;
+        padding-top: 10vh;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        text-transform: none;
+        animation: moveDown 1s ease-in-out forwards;
     }
 }

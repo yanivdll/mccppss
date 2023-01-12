@@ -9,7 +9,6 @@ function mccppss_load_scripts(){
 add_action('wp_enqueue_scripts', 'mccppss_load_scripts');            
 
 
-
 function mccppss_config(){
 register_nav_menus(
     array(
@@ -122,3 +121,72 @@ function mccppss_show_subpages( $pid ) {
     return $subpages; // Return the array of sub pages
 }
 add_shortcode('mccppss_childpages', 'mccppss_show_subpages');
+
+// This is the function that is responsible to validate and process the form. Still need to connect to the database and to the page-contact.php.
+function ngo_contact_form(){
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $errors = array();
+
+    //validate name
+    if (empty($_POST['name'])) {
+        $errors[] = 'Name is required';
+    } else {
+        $name = $_POST['name'];
+    }
+
+    //validate email
+    if (empty($_POST['email'])) {
+        $errors[] = 'Email is required';
+    } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email address';
+    } else {
+        $email = $_POST['email'];
+    }
+
+    //validate subject
+    if (empty($_POST['subject'])) {
+        $errors[] = 'Subject is required';
+    } else {
+        $subject = $_POST['subject'];
+    }
+
+    //validate message
+    if (empty($_POST['message'])) {
+        $errors[] = 'Message is required';
+    } else {
+        $message = $_POST['message'];
+    }
+
+    if (empty($errors)) {
+        // recipient email address
+        $to = 'your@email.com';
+
+        // subject
+        $subject = 'Contact Form Submission: ' . $subject;
+
+        // message
+        $message = "Name: $name\n" .
+                   "Email: $email\n" .
+                   "Subject: $subject\n" .
+                   "Message: $message";
+
+        // To send HTML mail, the Content-type header must be set
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+        // Additional headers
+        $headers[] = "To: $to";
+        $headers[] = "From: $name <$email>";
+
+        // Send email
+        if (mail($to, $subject, $message, implode("\r\n", $headers))) {
+            echo 'Your message has been sent.';
+        } else {
+            echo 'An error occurred while sending your message.';
+        }
+    } else {
+        // print errors
+        echo implode('<br>', $errors);
+    }
+}
+}

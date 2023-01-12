@@ -1,9 +1,25 @@
 //_layout.scss
 
 /*********************************/
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+
+header.container,
+main {
+    @include container(100%);
+}
+
+main {
+    flex: 1;
+}
+
 .container {
-    width: 90%;
-    margin: 0 auto;
+    @include container(90%);
 }
 
 section h1 {
@@ -12,41 +28,37 @@ section h1 {
     align-items: center;
 }
 
-.mission {
-    @include card(100%, 100%);
-    background-color: $quinary-color;
+.page-item {
+    width: 100%;
+    align-items: center;
+    margin: auto auto;
 
-    h1 {
-        padding: $padding-small $padding-medium;
-        color: $white-color;
-    }
-
-    p {
-        padding: $padding-small $padding-medium;
-        color: $white-color;
-        font-size: $font-size-medium;
+    img {
+        width: 100%;
+        display: block;
+        margin: auto;
     }
 }
 
-.projects {
-    background-color: $primary-color;
+// .projects {
+//     background-color: $primary-color;
 
-    h1 {
-        padding: $padding-small $padding-medium;
-        color: $white-color;
-    }
-}
+//     h1 {
+//         padding: $padding-small $padding-medium;
+//         color: $white-color;
+//     }
+// }
 
-.partners {
-    background-color: darksalmon;
-}
+// .partners {
+//     background-color: darksalmon;
+// }
 
-.projects,
-.partners {
-    // background: $tertiary-color;
-    margin-top: 20px;
-    // padding: 10px;
-}
+// .projects,
+// .partners {
+//     // background: $tertiary-color;
+//     margin-top: 20px;
+//     // padding: 10px;
+// }
 
 .flex-container {
     width: 100%;
@@ -99,4 +111,24 @@ section h1 {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        @include container(70%);
+    }
+
+    .page-item {
+        width: 60%;
+        align-items: center;
+        margin: auto auto;
+
+        img {
+            width: 100;
+            display: block;
+            margin: auto;
+        }
+    }
+
+
 }
