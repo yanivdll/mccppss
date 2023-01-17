@@ -10,8 +10,7 @@
             <article>
                 <h1 class="title"><?php the_title(); ?></h1>
                 <?php if ( has_post_thumbnail() ) : ?>
-                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium'); ?>" alt="">
-
+                <img class="page-hero" src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium'); ?>" alt="">
                 <?php endif; ?>
                 <?php $content = the_content();?>
             </article>

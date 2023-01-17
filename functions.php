@@ -122,71 +122,24 @@ function mccppss_show_subpages( $pid ) {
 }
 add_shortcode('mccppss_childpages', 'mccppss_show_subpages');
 
-// This is the function that is responsible to validate and process the form. Still need to connect to the database and to the page-contact.php.
-function ngo_contact_form(){
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $errors = array();
+// // function that process the form in page-contact.php
 
-    //validate name
-    if (empty($_POST['name'])) {
-        $errors[] = 'Name is required';
+function mccppss_contact_form() {
+    $name = sanitize_text_field($_POST["contactName"]);
+    $email = sanitize_email($_POST["email"]);
+    $message = esc_textarea($_POST["comments"]);
+    $to = get_option('admin_email');
+    $subject = "Contact from " . $name;
+    $headers = "From: " . $email . "\r\n";
+    $headers .= "Reply-To: ". $email . "\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+    if (wp_mail($to, $subject, $message, $headers)) {
+        echo '<div>';
+        echo '<p>Thanks for contacting us, expect a response soon.</p>';
+        echo '</div>';
     } else {
-        $name = $_POST['name'];
+        echo '<p>An unexpected error occurred</p>';
     }
-
-    //validate email
-    if (empty($_POST['email'])) {
-        $errors[] = 'Email is required';
-    } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Invalid email address';
-    } else {
-        $email = $_POST['email'];
-    }
-
-    //validate subject
-    if (empty($_POST['subject'])) {
-        $errors[] = 'Subject is required';
-    } else {
-        $subject = $_POST['subject'];
-    }
-
-    //validate message
-    if (empty($_POST['message'])) {
-        $errors[] = 'Message is required';
-    } else {
-        $message = $_POST['message'];
-    }
-
-    if (empty($errors)) {
-        // recipient email address
-        $to = 'your@email.com';
-
-        // subject
-        $subject = 'Contact Form Submission: ' . $subject;
-
-        // message
-        $message = "Name: $name\n" .
-                   "Email: $email\n" .
-                   "Subject: $subject\n" .
-                   "Message: $message";
-
-        // To send HTML mail, the Content-type header must be set
-        $headers[] = 'MIME-Version: 1.0';
-        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-        // Additional headers
-        $headers[] = "To: $to";
-        $headers[] = "From: $name <$email>";
-
-        // Send email
-        if (mail($to, $subject, $message, implode("\r\n", $headers))) {
-            echo 'Your message has been sent.';
-        } else {
-            echo 'An error occurred while sending your message.';
-        }
-    } else {
-        // print errors
-        echo implode('<br>', $errors);
-    }
+    die();
 }
-}
+add_action( 'admin_post_mccppss_contact_form', 'mccppss_contact_form' );

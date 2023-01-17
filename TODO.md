@@ -20,7 +20,10 @@ TODO: Add news items to homepage
 TODO: Make the news items a slider on mobile
 DONE: Complete the misssion box on homepage
 TODO: Turn the mission box to a widget
-TODO: Document the migrating from local to production
-TODO: Learn how to deploy changes from local to production
-TODO: Change theme folder name from `ngo` to `mccppss`
+DONE: Document the migrating from local to production
+DONE: Learn how to deploy changes from local to production
+DONE: Change theme folder name from `ngo` to `mccppss`
+DONE: Force https
+TODO: In the page template, make the image smaller and float to the right.
+TODO: In contact us page, move the email function to the functions.php file.
 -->

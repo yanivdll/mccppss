@@ -76,18 +76,19 @@ button {
     margin: 0 auto;
     background-color: $button-color;
     cursor: pointer;
-    padding: $padding-small;
+    padding: $padding-medium;
     border-radius: 5px;
     font-size: $font-size-smallest;
     text-transform: uppercase;
     // transition: background-color 0.3s ease-in-out;
     border: none;
     box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+    color: $button-text-color;
 
     a {
         grid-column-start: 1;
         grid-column-end: -1;
-        color: $white-color;
+        color: $button-text-color;
         font-size: $font-size-smallest;
         font-weight: 600;
     }

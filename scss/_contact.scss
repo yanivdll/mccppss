@@ -1,0 +1,38 @@
+// css for the form in the page-contact.php file
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background-color: $quaternary-color;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+    color: $white-color;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    // box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+}
+
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    // box-shadow: 1px 2px 3px 4px rgba(12, 12, 12, 0.2);
+}
+
+ul li {
+    list-style: none;
+}

@@ -33,10 +33,16 @@ section h1 {
     align-items: center;
     margin: auto auto;
 
+    // the generic img selector is too broad and is affecting both the images of the team memebers and of the hero image in the page.php template.
     img {
-        width: 100%;
         display: block;
         margin: auto;
+    }
+
+    // The following rule is targeting only the hero image in the page.php template.
+    img.page-hero {
+        width: 100%;
+        float: left;
     }
 }
 

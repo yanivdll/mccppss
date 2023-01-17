@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head();?>
+
+    <?php if( is_page('contact') ){ ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/verif.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js">
+    </script>
+    <?php }?>
+
+
+
     <!-- //     removed the title tag here because it will be added the theme_support function -->
 </head>
 
