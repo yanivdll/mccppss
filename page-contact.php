@@ -55,6 +55,7 @@ if(isset($_POST['submitted'])) {
                 <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <div class="thanks">
                     <p>Thanks, your email was sent successfully.</p>
+                    <a href="/home" class="btn btn-primary">Back to Home</a>
                 </div>
                 <?php } else { ?>
                 <!-- <?php the_content(); ?> -->
