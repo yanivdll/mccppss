@@ -12,9 +12,8 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/verif.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js">
     </script>
+
     <?php }?>
-
-
 
     <!-- //     removed the title tag here because it will be added the theme_support function -->
 </head>
