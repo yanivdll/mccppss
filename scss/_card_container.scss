@@ -16,6 +16,7 @@ a {
 
 .card {
     // width: 100%;
+    flex: 0 1 30%;
     margin-top: $margin-medium;
     margin-bottom: $margin-medium;
     margin-left: $margin-small;
@@ -63,20 +64,5 @@ a {
     .card-container {
         display: flex;
         flex-flow: wrap;
-    }
-
-    .card {
-        flex: 1 0 250px;
-        margin: 1%;
-    }
-
-    @media (min-width: 1001px) {
-        .card {
-            flex: 1 0 31%;
-        }
-
-        // .card:last-of-type {
-        //     flex-grow: 0;
-        // }
     }
 }

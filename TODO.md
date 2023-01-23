@@ -26,4 +26,5 @@ DONE: Change theme folder name from `ngo` to `mccppss`
 DONE: Force https
 TODO: In the page template, make the image smaller and float to the right.
 TODO: In contact us page, move the email function to the functions.php file.
+TODO: Write a readme for the repository
 -->
